@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from '@reach/router';
 
-import { rhythm } from '../utils/typography';
+import { rhythm } from '../ui/typography';
 
 const Wrapper = styled.div`
   margin: ${rhythm(2)} auto;
