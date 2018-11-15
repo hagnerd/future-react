@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "@reach/router": "^1.2.1",
+    "react": "^16.7.0-alpha.2",
+    "react-cache": "^2.0.0-alpha.1",
+    "react-dom": "^16.7.0-alpha.2",
+    "react-scripts": "2.1.1",
+    "react-testing-library": "^5.2.3",
+    "styled-components": "^4.1.1",
+    "typography": "^0.16.17",
+    "typography-theme-irving": "^0.15.10"
   },
   "scripts": {
     "start": "react-scripts start",
