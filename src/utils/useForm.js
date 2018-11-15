@@ -27,5 +27,9 @@ export default function useForm({
     });
   }
 
-  return { formState, handleSubmit, handleChange };
+  function clearForm() {
+    return setFormState(initialValues);
+  }
+
+  return { formState, handleSubmit, handleChange, clearForm };
 }

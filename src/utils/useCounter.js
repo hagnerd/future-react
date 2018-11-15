@@ -26,5 +26,9 @@ export default function useCounter({
     }
   }
 
-  return { count, changeBy, increment, decrement };
+  function reset() {
+    return setCount(initialValue);
+  }
+
+  return { count, changeBy, increment, decrement, reset };
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Button, Label, Form as UiForm, TextInput } from '../../../ui/';
+
 /* 
   The Goal - Gain a cursory understanding of React.useState();
 
@@ -21,17 +23,65 @@ import React from 'react';
 
 */
 
-export default function Toggle() {
+export function Toggle() {
   // TODO: call React.useState();
 
   return (
     <div>
       <h3>{/* on ? "ON" : "OFF"*/}</h3>
-      <button
+      <Button
       // onClick={() => setToggle(on => !on)}
       >
         Toggle
-      </button>
+      </Button>
     </div>
+  );
+}
+
+export function Counter() {
+  // TODO: call React.useState();
+
+  return (
+    <div>
+      <h3>{/* count */}</h3>
+      <Button
+      // onClick={() => setCount(count => count + 1)}
+      >
+        +1
+      </Button>
+      <Button
+      // onClick={() => setCount(count => count - 1)}
+      >
+        -1
+      </Button>
+    </div>
+  );
+}
+
+export function Form() {
+  // TODO: call React.useState()
+
+  return (
+    <UiForm
+    // onSubmit={handleSubmit}
+    >
+      <Label htmlFor="firstName">First Name</Label>
+      <TextInput
+        type="text"
+        id="firstName"
+        name="firstName"
+        // value={firstName}
+        // onChange={handleFirstNameChange}
+      />
+      <Label htmlFor="lastName">Last Name</Label>
+      <TextInput
+        type="text"
+        id="lastName"
+        name="lastName"
+        // value={lastName}
+        // onChange={handleLastNameChange}
+      />
+      <Button type="submit">Button</Button>
+    </UiForm>
   );
 }

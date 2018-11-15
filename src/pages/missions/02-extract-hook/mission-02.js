@@ -20,6 +20,24 @@ import React from 'react';
 
 */
 
+/*
+  useToggle()
+  takes an object { initialValue = false, deactivated = false, allowResetWhenDeactivated = true } = {}
+  returns and object { on, toggle, toggleOverride, manualToggle, reset }
+*/
+
+/* 
+  useCounter()
+  takes an object { initialValue = 0, changeBy = 1, floor = undefined, ceiling = undefined } = {}
+  returns an object { count, changeBy, increment, decrement, reset }
+*/
+
+/* 
+  useForm()
+  takes an object { initialValues = {}, onSubmit, resetOnSubmit = true, preventDefaul = true } = {}  
+  returns an object { formState, handleChange, handleSubmit, clearForm }
+*/
+
 export function ToggleOne({ initialValue = false, deactivated = false } = {}) {
   // TODO: Extract the logic from Toggle() into useToggle
   const [on, setToggle] = React.useState(initialValue);
@@ -59,6 +77,15 @@ export function ToggleTwo({ initialValue, deactivated = false }) {
   );
 }
 
+/*
+  TODO: Make a Convoluted Component
+  It should have use a counter that is the changeBy for another counter component
+
+  There should be a toggle that reveals a number input (form) for the floor
+  There should be another toggle that reveals a number input (form) for the ceiling
+
+  Then the second counter should be able to increment, and decrement using all of this info
+*/
 export default function App() {
   return (
     <div>

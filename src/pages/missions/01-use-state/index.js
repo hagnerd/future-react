@@ -1,7 +1,18 @@
 import React from 'react';
-import Layout from '../../../templates/mission-detail';
+import styled from 'styled-components';
 
+import Layout from '../../../templates/mission-detail';
 import { useForm } from '../../../utils';
+import { TextInput, rhythm } from '../../../ui';
+
+import { Toggle, Counter, Form } from './mission-01';
+
+const Container = styled.div`
+  margin: ${rhythm(2)} auto;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+`;
 
 export default () => {
   const { formState, handleChange } = useForm({
@@ -23,7 +34,7 @@ export default () => {
 
       <p>
         "Hi", you say. "My name is{' '}
-        <input
+        <TextInput
           type="text"
           value={formState.firstName}
           name="firstName"
@@ -68,6 +79,28 @@ export default () => {
       </p>
 
       <p>Crickets again...</p>
+
+      <hr />
+
+      <h4>The Components:</h4>
+
+      <Container>
+        <Toggle />
+      </Container>
+      <Container>
+        <Counter />
+      </Container>
+      <Container>
+        <Form />
+      </Container>
+
+      <h4>The Mission:</h4>
+      <a href="https://codesandbox.io/s/github/hagnerd/future-react/tree/master/?initialpath=%2Fmissions%2F01-use-state&module=%2Fsrc%2Fpages%2Fmissions%2F01-use-state%2Fmission-01.js&view=editor">
+        <img
+          alt="Edit future-react"
+          src="https://codesandbox.io/static/img/play-codesandbox.svg"
+        />
+      </a>
     </Layout>
   );
 };
