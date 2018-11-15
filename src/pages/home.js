@@ -1,27 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from '@reach/router';
-import { rhythm } from '../ui/typography';
 
-const ButtonLink = styled(Link)`
-  background-color: #5e80b0;
-  color: #2e3441;
-  transition: all 300ms ease-in-out;
-  padding: 10px 15px;
-  text-decoration: none;
-  border-radius: 2px;
-
-  &:hover {
-    background-color: #2e3441;
-    color: #5e80b0;
-  }
-`;
-
-const FlexSection = styled.section`
-  margin: ${rhythm(2)} 0;
-  display: flex;
-  justify-content: space-around;
-`;
+import { SecretContext } from '../app';
+import { Button, FlexSection } from '../ui';
+import { MindWipeButton } from '../components';
 
 const Title = styled.h1`
   text-align: center;
@@ -35,19 +18,51 @@ const Container = styled.div`
   height: 100vh;
 `;
 
-export default () => {
+const Centered = styled.p`
+  text-align: center;
+`;
+
+function SecretAgentHomePage() {
   return (
     <Container>
       <Title>F.U.T.R.</Title>
-      <p>
-        The top secret bureau. There's nothing to see here. Unless you want to
-        learn about Hooks, and Concurrent React.
-      </p>
+      <Centered>
+        Welcome to F.U.T.R. Learn all of the newest features of React by
+        traveling forward in time.
+      </Centered>
 
       <FlexSection>
-        <ButtonLink to="/missions">Secret Missions</ButtonLink>
-        <ButtonLink to="/examples">Explore Examples</ButtonLink>
+        <Button as={Link} to="/missions">
+          Secret Missions
+        </Button>
+        <Button as={Link} to="/examples">
+          Explore Examples
+        </Button>
+        <MindWipeButton context={SecretContext} />
       </FlexSection>
     </Container>
   );
+}
+
+function NormalHomePage() {
+  return (
+    <Container>
+      <Title>F.U.T.R.</Title>
+      <Centered>
+        Some boring agency you probably don't care about. Now get off my lawn.
+      </Centered>
+
+      <FlexSection>
+        <Button as={Link} to="/super-secret-agent-test">
+          Find Out More Anyways
+        </Button>
+      </FlexSection>
+    </Container>
+  );
+}
+
+export default ({ context }) => {
+  const { isSecretAgent } = React.useContext(context);
+
+  return isSecretAgent ? <SecretAgentHomePage /> : <NormalHomePage />;
 };
