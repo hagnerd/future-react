@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import typography from './typography';
+import typography from 'typography';
 
 typography.injectStyles();
 
