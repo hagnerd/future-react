@@ -4,9 +4,9 @@
   "private": true,
   "dependencies": {
     "@reach/router": "^1.2.1",
-    "react": "^16.7.0-alpha.2",
-    "react-cache": "^2.0.0-alpha.1",
-    "react-dom": "^16.7.0-alpha.2",
+    "react": "^16.7.0-alpha.0",
+    "react-cache": "^2.0.0-alpha.0",
+    "react-dom": "^16.7.0-alpha.0",
     "react-scripts": "2.1.1",
     "react-testing-library": "^5.2.3",
     "styled-components": "^4.1.1",
