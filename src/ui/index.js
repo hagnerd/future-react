@@ -1,5 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
+import { Form, FormButton, Label, TextInput } from './form';
+
 import { rhythm } from './typography';
 
 const FlexSection = styled.section`
@@ -29,4 +31,13 @@ const MindWipeGlobalStyles = createGlobalStyle`
   }
 `;
 
-export { Button, FlexSection, MindWipeGlobalStyles, rhythm };
+export {
+  Button,
+  FlexSection,
+  MindWipeGlobalStyles,
+  rhythm,
+  Form,
+  FormButton,
+  Label,
+  TextInput,
+};

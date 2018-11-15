@@ -5,6 +5,8 @@ import { Link } from '@reach/router';
 import { rhythm } from '../../ui/typography';
 
 /* Missions Pages */
+import UseState from './01-use-state';
+import ExtractHook from './02-extract-hook';
 
 /* Styles */
 const Navigation = styled.ul`
@@ -24,11 +26,32 @@ const MissionsHome = () => (
     <h1>MISSION LOG</h1>
 
     <Navigation>
-      <Li>{/*<Link></Link> Sub Pages */}</Li>
+      <Li>
+        <Link to="/missions/01-use-state">01 - Use State</Link>
+      </Li>
+      <Li>
+        <Link to="/missions/02-extract-hook">02 - Extract Hook</Link>
+      </Li>
+      <Li>
+        <Link to="/missions/03-use-reducer">03 - Use Reducer</Link>
+      </Li>
+      <Li>
+        <Link to="/missions/04-use-context">04 - Use Context</Link>
+      </Li>
+      <Li>
+        <Link to="/missions/05-use-context">05 - Use Effect</Link>
+      </Li>
+      <Li>
+        <Link to="/missions/06-use-context">06 - Use Ref</Link>
+      </Li>
     </Navigation>
   </React.Fragment>
 );
 
-const MissionsSubPages = [{ Component: MissionsHome, path: '/' }];
+const MissionsSubPages = [
+  { Component: MissionsHome, path: '/' },
+  { Component: UseState, path: '/01-use-state' },
+  { Component: ExtractHook, path: '/02-extract-hook' },
+];
 
 export { MissionsSubPages };

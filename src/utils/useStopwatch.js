@@ -17,9 +17,15 @@ export default function useStopwatch() {
     };
   });
 
+  function resetTimer() {
+    setRunning(false);
+    setTime(0);
+  }
+
   return {
     time,
     isRunning,
     setRunning,
+    resetTimer,
   };
 }
