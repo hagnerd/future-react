@@ -7,6 +7,10 @@ import { rhythm } from '../../ui/typography';
 /* Missions Pages */
 import UseState from './01-use-state';
 import ExtractHook from './02-extract-hook';
+import Mission3 from './03-use-reducer';
+import Mission4 from './04-use-context';
+import Mission5 from './05-use-effect';
+import Mission6 from './06-use-ref';
 
 /* Styles */
 const Navigation = styled.ul`
@@ -52,6 +56,10 @@ const MissionsSubPages = [
   { Component: MissionsHome, path: '/' },
   { Component: UseState, path: '/01-use-state' },
   { Component: ExtractHook, path: '/02-extract-hook' },
+  { Component: Mission3, path: '/03-use-reducer' },
+  { Component: Mission4, path: '/04-use-context' },
+  { Component: Mission5, path: '/05-use-effect' },
+  { Component: Mission6, path: '/06-use-ref' },
 ];
 
 export { MissionsSubPages };
