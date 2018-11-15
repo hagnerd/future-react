@@ -9,6 +9,12 @@ irvingTheme.overrideThemeStyles = () => ({
   'a:hover': {
     color: '#5E80B0',
   },
+  h1: {
+    color: '#ECEFF5',
+  },
+  h2: {
+    color: '#8FBCBB',
+  },
 });
 
 const typography = new Typography(irvingTheme);

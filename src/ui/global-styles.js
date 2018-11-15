@@ -1,12 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
-import typography from 'typography';
+import typography from './typography';
 
 typography.injectStyles();
 
 const GlobalStyles = createGlobalStyle`
   @import url("https://fonts.googleapis.com/css?family=Exo:700|Yrsa:400,700");
 
-  body, html {
+  *, body, html {
     background-color: #384052;
     color: #D8DEEA;
     margin: 0;
